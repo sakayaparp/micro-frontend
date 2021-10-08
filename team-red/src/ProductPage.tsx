@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { History } from 'history';
 import { product } from './product';
+import { Link } from 'react-router-dom';
 
 export interface ProductPageProps {
   name: string;
@@ -41,6 +42,7 @@ export const ProductPage: React.FC<ProductPageProps> = ({ name, history, BasketI
             </button>
           ))}
         </div>
+        <Link to="/yellow">Yellow Page</Link>
         <BuyButton item={variant.sku} />
         <Recommendations item={variant.sku} />
       </>

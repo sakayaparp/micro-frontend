@@ -14,6 +14,8 @@ const piral = createPiral({
   extendApi: [createContainersApi()],
 });
 
+piral.root.setData('setSomething', 'Something Data');
+
 const app = (
   <Piral instance={piral}>
     <SetRoute path="/" component={() => <Redirect from="/" to="/products" />} />
