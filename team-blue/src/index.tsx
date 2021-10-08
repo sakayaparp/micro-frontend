@@ -10,12 +10,14 @@ interface BuyButtonExtension {
 }
 
 export function setup(app: PiletApi) {
+  app.setData('some-data', 4);
   const connectBasket = app.createState({
     state: {
       items: [],
     },
     actions: {
       addToCart(dispatch, item: string) {
+        app.setData('some-data', 5);
         dispatch(state => ({
           ...state,
           items: [...state.items, item],
