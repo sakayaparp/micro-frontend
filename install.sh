@@ -1,6 +1,6 @@
 #!/bin/bash
 
-declare -a pilets=("team-blue" "team-green" "team-red")
+declare -a pilets=("team-blue" "team-green" "team-red" "team-yellow")
 
 cd app-shell
 rm -rf node_modules
