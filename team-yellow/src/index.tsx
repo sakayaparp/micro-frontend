@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { PiletApi } from 'app-shell';
+import { YellowPage } from './YellowPage';
 
 export function setup(app: PiletApi) {
   app.showNotification('Hello from Piral!', {
@@ -15,5 +16,5 @@ export function setup(app: PiletApi) {
     initialRows: 1,
   });
 
-  app.registerPage('/helloyellow', () => <h1>Hello Yellow Team!!!</h1>);
+  app.registerPage('/yellow', ({ piral }) => <YellowPage BasketInfo={() => <piral.Extension name="basket-info" />} />);
 }
